@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:fooddelvery/components/my_button.dart';
 import 'package:fooddelvery/components/my_textfield.dart';
+import 'package:fooddelvery/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   final void Function()? onTap;
@@ -15,6 +15,14 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailController = TextEditingController();
 
   TextEditingController passwordController = TextEditingController();
+
+  void signin() {
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomeScreen(),
+        ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
             //Login Button
             MyButton(
               text: "Sign In",
-              onTap: widget.onTap,
+              onTap: signin,
             ),
             const SizedBox(
               height: 8,

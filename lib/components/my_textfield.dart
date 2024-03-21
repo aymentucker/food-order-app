@@ -6,12 +6,11 @@ class MyTextfield extends StatelessWidget {
   final String hint;
   final TextInputType? keyboardType;
   const MyTextfield(
-      {Key? key,
+      {super.key,
       required this.controller,
       required this.obscureText,
       required this.hint,
-      this.keyboardType})
-      : super(key: key);
+      this.keyboardType});
 
   @override
   Widget build(BuildContext context) {

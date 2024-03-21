@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fooddelvery/auth/login_or_signup.dart';
-import 'package:fooddelvery/screens/signup_screen.dart';
 import 'package:fooddelvery/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
-import 'screens/login_screen.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: Provider.of<ThemeProvider>(context).themeData,
-      home: LoginOrSignup(),
+      home: const LoginOrSignup(),
     );
   }
 }
