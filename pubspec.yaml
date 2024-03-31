@@ -10,7 +10,7 @@ version: 1.0.0+1
 environment:
   sdk: '>=3.4.0-99.1.beta <4.0.0'
 
-# Dependencies specify other packages that your package needs in order to work.
+# Dependencies spec ify other packages that your package needs in order to work.
 
 dependencies:
   flutter:

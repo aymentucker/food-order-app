@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fooddelvery/components/my_drawer_tile.dart';
+import 'package:fooddelvery/screens/settings_screen.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -33,17 +34,20 @@ class MyDrawer extends StatelessWidget {
             height: 60,
           ),
           //home list tile
-          const MyDrawerTile(
+          MyDrawerTile(
             text: 'H O M E',
             icon: Icons.home,
+            onTap: () => Navigator.pop(context),
           ),
           const SizedBox(
             height: 20,
           ),
           //settings list tile
-          const MyDrawerTile(
+          MyDrawerTile(
             text: 'S E T T I N G S',
             icon: Icons.settings,
+            onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => SettingsScreen())),
           ),
           const Spacer(),
           //logout list tile
