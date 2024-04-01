@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fooddelvery/components/my_drawer.dart';
+import 'package:fooddelvery/components/my_sliver_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,11 +8,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.background,
-        title: const Text('Home'),
-      ),
       drawer: const MyDrawer(),
+      body: NestedScrollView(
+          headerSliverBuilder: (context, innerBoxIsScrolled) => [
+                const MySliverAppBar(
+                  title: Text('Home'),
+                  child: Text('child'),
+                )
+              ],
+          body: Container(
+            color: Colors.blue,
+          )),
     );
   }
 }
